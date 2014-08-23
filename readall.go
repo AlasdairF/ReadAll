@@ -3,7 +3,7 @@ package readall
 import "io"
 
 // Replaces ioutil.ReadAll, when you know the (uncompressed) length.
-func (r io.Reader) ReadAll(s int) ([]byte, error) {
+func ReadAll(r io.Reader, s int) ([]byte, error) {
 	var n,m int
 	var e error
 	b := make([]byte,s)
