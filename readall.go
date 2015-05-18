@@ -6,7 +6,7 @@ import "io"
 func ReadAll(r io.Reader, s int) ([]byte, error) {
 	var n,m int
 	var e error
-	b := make([]byte,s)
+	b := make([]byte, s + 512)
 	for l:=s; l>0; l-=m {
 		m, e = r.Read(b[n:s])
 		n += m
